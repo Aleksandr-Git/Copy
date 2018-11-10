@@ -3,6 +3,9 @@ import shutil
 import time
 
 path = './pap'
+path_work = ''
+path_origin = ''
+path_copy = ''
 
 size = os.path.getsize(path)
 #files = os.listdir(path)
@@ -27,7 +30,6 @@ def fun_copy(path):  # копирует файлы из папки, но не к
 
     for i in os.listdir(path):
         if os.path.isdir(path + '/' + i):
-
             fun(path + '/' + i)
 
         else:
@@ -38,15 +40,9 @@ def fun_copy(path):  # копирует файлы из папки, но не к
 
 cur_dir = os.getcwd()
 print(cur_dir)
-#shutil.copytree(cur_dir + '/pap', cur_dir + '/folder3/')  # копирует содержичмое попки в другую
-#shutil.move(cur_dir + '/pap', cur_dir + '/folder2/')  # перемещает файлы из первой папки во вторую и удаляет первую
-
-#shutil.rmtree('./folder3')  # удаляет папку
-
-#os.rename('./folder2', './folder4')  # переименовывает папку
-#os.rename('./folder4', './folder2')
 
 print(os.listdir('./pap_2'))
+
 def copy_folder():
     shutil.move('./pap_2' + '/' + os.listdir('./pap_2')[0], './pap_3')  # перемещает файлы из первой папки во вторую и удаляет первую
     #os.rename('./pap_3/0', './pap_3/' + str(int(os.listdir('./pap_3')[-1]) + 1))
