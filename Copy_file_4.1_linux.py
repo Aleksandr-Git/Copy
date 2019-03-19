@@ -1,8 +1,6 @@
 # работает
 # копирует на яндекс диск, перед запуском проверить примонтирован ли диск
-# перенести копирование в отдельный поток
-# потестировать на inux
-# 
+# копированме пересено в отдельный поток
 
 import os
 import shutil
@@ -15,6 +13,8 @@ status_copy = False
 size = os.path.getsize(path)
 #files = os.listdir(path)
 total_size = 0
+
+os.system('sudo mount -a')
 
 def fun(path):   # определяет размер папки
     global total_size
@@ -66,7 +66,7 @@ while True:
     total_size = 0
 
     if fun('./pap_2') > 20 and status_copy == False:
-        status_copy == True
+        status_copy = True
 #        time.sleep(5)
 #        try:
         Thread(target = copy_folder())
