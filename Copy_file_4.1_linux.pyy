@@ -38,15 +38,16 @@ print(cur_dir)
 
 print(os.listdir('./pap_2'))
 
-
+# ищем самую старую папку
 def last_pap():
+# Создаем список папок в директории
     dir_list = [os.path.join(path, x) for x in os.listdir(path)]
-    print(dir_list)
+#    print(dir_list)
     if dir_list:
-    # Создадим список из путей к файлам и дат их создания.
+# Создадим список из путей к файлам и дат их создания.
         date_list = [[x, os.path.getctime(x)] for x in dir_list]
   
-    # Отсортируем список по дате создания в прямом порядке
+# Отсортируем список по дате создания папки от самой старой к самой новой
         sort_date_list = sorted(date_list, key=lambda x: x[1], reverse=False)
 
         return sort_date_list[0][0]
