@@ -59,7 +59,7 @@ def copy_folder():
 print(fun('.\\pap_2'))
 print(last_pap())
 
-
+'''
 while True:
     total_size = 0
 
@@ -71,5 +71,5 @@ while True:
 #        except Exception:
 #            continue
         print(str(total_size / 1024 / 1024) + ' Мб')
-        print(os.listdir('.\\pap_2'))
-
+        p'int(os.listdir('.\\pap_2'))
+'''
